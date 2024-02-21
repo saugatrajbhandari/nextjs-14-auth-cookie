@@ -8,7 +8,7 @@ export function GET(req: NextRequest) {
 
     return Response.json({ userData, token });
   } catch (error) {
-    return Response.json({ message: "no " });
+    return NextResponse.json({ message: "User data not found" });
   }
 }
 
