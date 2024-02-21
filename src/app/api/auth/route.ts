@@ -61,7 +61,6 @@ export async function DELETE(req: NextRequest) {
     cookies().delete("user");
     cookies().delete("token");
 
-    console.log(req.cookies.get("user"));
 
     return NextResponse.json({ message: "Logout successful." });
   } catch (error) {
