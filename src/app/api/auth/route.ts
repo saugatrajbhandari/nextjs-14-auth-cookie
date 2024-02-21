@@ -60,8 +60,7 @@ export async function DELETE(req: NextRequest) {
   try {
     cookies().delete("user");
     cookies().delete("token");
-
-
+    
     return NextResponse.json({ message: "Logout successful." });
   } catch (error) {
     return NextResponse.json({
