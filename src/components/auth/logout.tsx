@@ -1,15 +1,15 @@
 "use client";
 
-import React from "react";
-import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+
+import { Button } from "../ui/button";
 
 const Logout = ({ token }: { token: string | undefined }) => {
   const router = useRouter();
 
-  const handleDelete = async (e: React.MouseEvent) => {
+  const handleDelete = async () => {
     const response = await fetch("/api/auth", {
-      method: "Delete",
+      method: "DELETE",
     });
 
     if (response.ok) {
